@@ -1,0 +1,17 @@
+# Ambientes e dependências
+.venv/
+*.pyc
+__pycache__/
+
+# Configurações locais
+.env
+.env.*
+!*.example
+
+# Dados e artefatos gerados
+docs/artigos/
+data/catalogo.csv
+data/index/
+
+# Miscelânea
+.DS_Store
