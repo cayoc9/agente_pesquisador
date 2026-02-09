@@ -24,7 +24,7 @@ from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parents[1]
 ISSUE_URL = "https://sol.sbc.org.br/index.php/sbrc/issue/view/1500"
-ARTIGOS_DIR = ROOT / "docs" / "artigos"
+ARTIGOS_DIR = ROOT / "docs" / "artigos" / "sbrc"
 CATALOGO_PATH = ROOT / "data" / "catalogo.csv"
 HEADERS = {"User-Agent": "agente-pesquisador/0.1 (+https://github.com/)"}
 

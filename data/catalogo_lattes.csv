@@ -1,0 +1,2 @@
+record_id,source_profiles,publication_type,title,authors,year,venue,doi,dedupe_key,candidate_urls,pdf_url,local_pdf,download_status,download_error
+lattes_00001,eduardo_cerqueira,periodico,Enhancing robustness in federated learning using minimal repair and dynamic adaptation in a scenario with client failures,"SOUSA, JOHN ; RIBEIRO, EDUARDO ; BUSTINCIO, ROMULO ; BASTOS, LUCAS ; MORAIS, RENAN ; Cerqueira, Eduardo ; ROSÁRIO, DENIS",2025,Annals of Telecommunications,10.1007/s12243-025-01075-3,doi:10.1007/s12243-025-01075-3,https://doi.org/10.1007/s12243-025-01075-3,,,not_found,

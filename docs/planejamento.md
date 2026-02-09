@@ -71,3 +71,46 @@ Expansão:
 2) Gerar planilha inicial com metadados básicos (título, autores, link).
 3) Implementar agente LangChain para preencher ficha de revisão e anexar à planilha.
 4) Configurar índice de embeddings e um CLI simples para executar as etapas.
+
+## Modo Lattes (periodicos + anais)
+- Objetivo: baixar artigos unicos dos CVs Lattes em PDF e salvar catalogo separado.
+- Fonte: parser local dos PDFs + enriquecimento web (Crossref/OpenAlex) + download com Playwright.
+- Pasta de entrada recomendada: `input/lattes/` (dados brutos fornecidos pelo usuario, separados de `data/` e `docs/`).
+- Saidas:
+  - `data/catalogo_lattes.csv`
+  - `docs/artigos/lattes/*.pdf`
+
+### Setup
+1) Instalar dependencias:
+   - `pip install -r requirements.txt`
+2) Instalar navegador do Playwright:
+   - `python -m playwright install chromium`
+
+### Execucao
+- Coloque os curriculos PDF em `input/lattes/`.
+- Rodar pipeline completo:
+  - `python scripts/download_lattes_articles.py`
+- Usar outro diretorio de entrada:
+  - `python scripts/download_lattes_articles.py --input-dir /caminho/para/cvs`
+- Smoke run:
+  - `python scripts/download_lattes_articles.py --max-items 10`
+- Executar navegador visivel:
+  - `python scripts/download_lattes_articles.py --headful`
+- Reprocessar itens ja catalogados:
+  - `python scripts/download_lattes_articles.py --force`
+
+### Campos do catalogo Lattes
+- `record_id`
+- `source_profiles`
+- `publication_type`
+- `title`
+- `authors`
+- `year`
+- `venue`
+- `doi`
+- `dedupe_key`
+- `candidate_urls`
+- `pdf_url`
+- `local_pdf`
+- `download_status` (`downloaded`, `not_found`, `paywalled`, `error`)
+- `download_error`

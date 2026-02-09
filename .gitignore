@@ -10,8 +10,10 @@ __pycache__/
 
 # Dados e artefatos gerados
 docs/artigos/
-data/catalogo.csv
+#data/catalogo.csv
 data/index/
+input/**/*.pdf
+input/**/*.PDF
 
 # Miscelânea
 .DS_Store
